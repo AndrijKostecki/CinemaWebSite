@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BEST CINEMA</title>
+    <link rel="stylesheet" href="stylesheet.css">
+    <style>
+
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+    <div class="header"><h2>Best cinema</h2></div>
+    <div class="page_header"><h3>Contact</h3></div>
+    <nav class="menu">
+            <a href="index.html"><button type="button">Main</button></a><br>
+            <a href="movieshows.html"><button type="button">Movie Shows</button></a><br>
+
+    </nav>
+
+        <div class="form">
+            <form id="contactForm" onsubmit="showAlert(event)">
+                <label for="fname">First name:</label><br>
+                <input type="text" id="fname" name="fname"><br>
+                <label for="lname">Last name:</label><br>
+                <input type="text" id="lname" name="lname"><br>
+                <label for="email">Email:</label><br>
+                <input type="text" id="email" name="email"><br>
+                <label for="topic">Choose a topic:</label><br>
+                <select id="topic" name="topic">
+                    <option value="movieshow">Movie show</option>
+                    <option value="film">Film</option>
+                    <option value="Cinema">Cinema</option>
+                </select><br>
+                <label for="message">Message</label><br>
+                <textarea id ="message" name="message" rows="10" cols="30">
+                </textarea><br>
+                <input type="submit" value="Send">
+
+
+            </form>
+
+
+
+    </div>
+    <div class="footer"><h4>Andrij Kostecki</h4></div>
+</div>
+
+</body>
+<script>
+    function showAlert(event) {
+      event.preventDefault();
+      alert("Message has been sent");
+      document.getElementById("contactForm").reset();
+    }
+</script>
+</html>
